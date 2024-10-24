@@ -48,7 +48,6 @@ Para a identificação de possíveis outliers, foram gerados boxplots das variá
 
 Com base no gráfico acima está uma análise dos dados presentes na imagem;<br>
 <br>
-
 <b>children_reading_proficiency:</b> A variável geral de proficiência em leitura de crianças apresenta uma distribuição relativamente ampla, com um intervalo interquartil que varia de aproximadamente 20 a 60. Não há muitos outliers identificados, sugerindo que a maior parte dos dados está dentro do intervalo esperado.
 <br>
 
