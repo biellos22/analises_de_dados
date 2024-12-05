@@ -15,13 +15,13 @@ Aluno: Gabriel Victor Martins Carvalho - Turma B<br>
 </h5>
 
 <h6 align="center">Descrição breve</h6>
-<p>O trabalho a seguir deverá ser desenvolvido por meio de uma Análise Exploratória de Dados, utilizando o conjunto de dados previamente selecionado. A entrega final consistirá em um relatório detalhado da análise realizada pelo grupo. O link do repositório no GitHub, contendo o relatório e o código-fonte, deverá ser enviado por e-mail. Além dos scripts, recomenda-se a edição do arquivo README no GitHub para a adequada apresentação dos resultados obtidos.
+<p> Este trabalho será desenvolvido com uma Análise Exploratória de Dados, utilizando o conjunto de dados previamente selecionado. A entrega final será um relatório detalhado, realizada pelo grupo. O link do repositório no GitHub, contendo o relatório e o código-fonte, deverá ser enviado por e-mail. Além dos scripts, recomenda-se a edição do arquivo README no GitHub para a adequada apresentação dos resultados obtidos.
 </p>
 
 #
 
 <b>Introdução:</b><br>
-O presente relatório documenta a exploração de dados realizada sobre o conjunto de dados intitulado "Learning Poverty (Pobreza de Aprendizagem)". O objetivo desta análise é compreender a qualidade dos dados, suas características principais e identificar a presença de outliers, além de examinar as correlações entre as variáveis. 
+O relatório documenta a análise exploratória realizada sobre o conjuntode dados "Learning Poverty (Pobreza de Aprendizagem)". O objetivo desta análise é avaliar a qualidade dos dados, suas características principais e identificar a presença de outliers, além de explorar as correlações entre as variáveis. 
 <br>
 
 <b>Contextualização da base de dados:</b><br>
