@@ -25,9 +25,11 @@ O relatório documenta a análise exploratória realizada sobre o conjuntode dad
 <br>
 
 <b>Contextualização da base de dados:</b><br>
-Learning Poverty (Pobreza de Aprendizagem), desenvolvido pelo Banco Mundial, que mede a incapacidade de uma criança de 10 anos em ler e compreender um texto simples. Este indicador combina duas variáveis principais: a proporção de crianças que não atingem a proficiência mínima em leitura, medida diretamente nas escolas, e a porcentagem de crianças fora da escola, com a presunção de que essas crianças não possuem essa proficiência.
-A base de dados inclui informações de diversos países e anos, fornecendo uma visão detalhada das desigualdades no aprendizado infantil ao redor do mundo. Dados sobre a proficiência de leitura de crianças por gênero, a porcentagem de crianças fora da escola e indicadores de aprendizado geral, segmentados por regiões geográficas e metodologias específicas, como as do GAML (Global Alliance to Monitor Learning).
-Esses dados oferecem uma perspectiva global sobre a situação educacional, evidenciando as variações significativas entre diferentes regiões e destacando a necessidade de políticas educacionais eficazes que não apenas garantam o acesso à escola, mas também assegurem que as crianças realmente adquiram as habilidades essenciais de leitura e compreensão.
+A base de dados 'Learning Poverty'(Pobreza de Aprendizagem), desenvolvido pelo Banco Mundial, mede a incapacidade de uma criança de 10 anos em ler e compreender um texto simples. Este indicador combina duas variáveis principais: a proporção de crianças que não atingem a proficiência mínima em leitura, medida diretamente nas escolas, e a porcentagem de crianças fora da escola, com a presunção de que essas crianças não possuem essa proficiência.
+
+O conjunto de dados abrange informações de diferentes países e períodos, fornecendo uma visão detalhada das desigualdades no aprendizado infantil ao redor do mundo. Além disso Dados, inclui Dados como a proficiência de leitura de crianças por gênero, a porcentagem de crianças fora da escola e indicadores de aprendizado geral, organizados por regiões geográficas e metodologias específicas, como as do GAML (Global Alliance to Monitor Learning).
+
+Esses dados oferecem uma visão global sobre a situação educacional, destacando as variações significativas entre diferentes regiões e reforçando a urgência políticas educacionais eficazes que não apenas garantam o acesso à escola, mas também assegurem que as crianças realmente adquiram as habilidades essenciais, como leitura e compreensão.
 <br>
 <br>
 Carregamento e Visualização Inicial:<br>
