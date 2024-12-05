@@ -33,7 +33,7 @@ Esses dados oferecem uma visão global sobre a situação educacional, destacand
 <br>
 <br>
 Carregamento e Visualização Inicial:<br>
-O processo de exploração foi iniciado com o carregamento do arquivo CSV, seguido pela exibição das primeiras linhas do conjunto de dados. Esta etapa inicial foi crucial para uma familiarização com as variáveis presentes, permitindo uma primeira visão sobre a estrutura e os tipos de dados disponíveis.
+A exploração começou com o carregamento do arquivo CSV, seguido pela exibição das primeiras linhas do conjunto de dados. Esta etapa inicial foi crucial para uma familiarização com as variáveis presentes, permitindo uma primeira visão sobre a estrutura e os tipos de dados disponíveis.
 <br>
 
 Verificação de Valores Ausentes:<br>
