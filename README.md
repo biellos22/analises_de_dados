@@ -24,6 +24,12 @@ Aluno: Gabriel Victor Martins Carvalho - Turma B<br>
 O presente relatório documenta a exploração de dados realizada sobre o conjunto de dados intitulado "Learning Poverty (Pobreza de Aprendizagem)". O objetivo desta análise é compreender a qualidade dos dados, suas características principais e identificar a presença de outliers, além de examinar as correlações entre as variáveis. 
 <br>
 
+<b>Contextualização da base de dados:</b><br>
+Learning Poverty (Pobreza de Aprendizagem), desenvolvido pelo Banco Mundial, que mede a incapacidade de uma criança de 10 anos em ler e compreender um texto simples. Este indicador combina duas variáveis principais: a proporção de crianças que não atingem a proficiência mínima em leitura, medida diretamente nas escolas, e a porcentagem de crianças fora da escola, com a presunção de que essas crianças não possuem essa proficiência.
+A base de dados inclui informações de diversos países e anos, fornecendo uma visão detalhada das desigualdades no aprendizado infantil ao redor do mundo. Dados sobre a proficiência de leitura de crianças por gênero, a porcentagem de crianças fora da escola e indicadores de aprendizado geral, segmentados por regiões geográficas e metodologias específicas, como as do GAML (Global Alliance to Monitor Learning).
+Esses dados oferecem uma perspectiva global sobre a situação educacional, evidenciando as variações significativas entre diferentes regiões e destacando a necessidade de políticas educacionais eficazes que não apenas garantam o acesso à escola, mas também assegurem que as crianças realmente adquiram as habilidades essenciais de leitura e compreensão.
+<br>
+<br>
 Carregamento e Visualização Inicial:<br>
 O processo de exploração foi iniciado com o carregamento do arquivo CSV, seguido pela exibição das primeiras linhas do conjunto de dados. Esta etapa inicial foi crucial para uma familiarização com as variáveis presentes, permitindo uma primeira visão sobre a estrutura e os tipos de dados disponíveis.
 <br>
@@ -37,41 +43,49 @@ Foram calculadas as estatísticas descritivas para as variáveis numéricas. Est
 <br>
 
 Tratamento de Valores Ausentes:<br>
-Optou-se por preencher os valores ausentes nas colunas numéricas utilizando a mediana, uma abordagem que se mostra robusta em relação à presença de outliers. Para garantir a integridade dos dados, foi criada uma cópia do DataFrame original antes da aplicação da mediana. Este tratamento é essencial para preparar os dados para análises estatísticas mais avançadas.
+Aos valores ausentes, a análise inicial revelou que algumas colunas apresentavam uma quantidade significativa de dados faltantes. Para tratar isso, foi adotada a estratégia de substituir os valores ausentes nas variáveis numéricas pela mediana de cada coluna. Isso foi feito para evitar que valores extremos ou outliers influenciassem negativamente o processo de imputação. A escolha da mediana, em vez da média, se deu por ser uma abordagem mais robusta frente à presença de valores atípicos. Ao preenchimento dos valores ausentes, a integridade dos dados foi restaurada, permitindo uma análise mais precisa e confiável nas etapas subsequentes.
 <br>
 
 Identificação de Outliers:<br>
 Para a identificação de possíveis outliers, foram gerados boxplots das variáveis numéricas. Essas visualizações permitiram uma análise gráfica da distribuição dos dados, facilitando a identificação de pontos que se afastam significativamente dos quartis. A identificação de outliers é uma etapa crítica para compreender a variação nos dados e seu potencial impacto nas análises subsequentes.
 <br>
 
-![download](https://github.com/user-attachments/assets/919b8a30-797d-411c-b87d-f88f3f50f115)
+![image](https://github.com/user-attachments/assets/7e0d70b4-e985-42eb-b6f8-3078bb622fd2)
 
-Com base no gráfico acima está uma análise dos dados presentes na imagem;<br>
-<br>
-<b>children_reading_proficiency:</b> A variável geral de proficiência em leitura de crianças apresenta uma distribuição relativamente ampla, com um intervalo interquartil que varia de aproximadamente 20 a 60. Não há muitos outliers identificados, sugerindo que a maior parte dos dados está dentro do intervalo esperado.
-<br>
 
-<b>female_children_reading_proficiency:</b> A distribuição da proficiência de leitura entre meninas apresenta uma mediana inferior à variável geral, por volta de 20, e um número considerável de outliers. Isso sugere uma concentração de dados mais baixos, com algumas observações que se afastam dos quartis superiores.
+<br>
+<b>children_reading_proficiency (proficiência de leitura das crianças:</b> A variável geral de proficiência em leitura de crianças apresenta uma distribuição relativamente ampla, com um intervalo interquartil que varia de aproximadamente 20 a 60. Não há muitos outliers identificados, sugerindo que a maior parte dos dados está dentro do intervalo esperado.
 <br>
 
-<b>male_children_reading_proficiency:</b> A distribuição da proficiência de leitura entre meninos é semelhante à das meninas, com uma mediana um pouco maior (aproximadamente 30) e uma concentração de dados dentro dos quartis. Também há outliers, mas em menor número comparado à variável das meninas.
+<b>female_children_reading_proficiency (proficiência de leitura entre meninas):</b> A distribuição da proficiência de leitura entre meninas apresenta uma mediana inferior à variável geral, por volta de 20, e um número considerável de outliers. Isso sugere uma concentração de dados mais baixos, com algumas observações que se afastam dos quartis superiores.
 <br>
 
-<b>children_out_of_school:</b> Esta variável, relacionada ao número de crianças fora da escola, tem uma mediana muito baixa (próxima de zero), indicando que, na maior parte das amostras, poucas crianças estão fora da escola. No entanto, há muitos outliers, o que pode indicar localidades ou situações excepcionais em que há um número significativamente maior de crianças fora da escola.
+<b>male_children_reading_proficiency (proficiência de leitura entre meninos):</b> A distribuição da proficiência de leitura entre meninos é semelhante à das meninas, com uma mediana um pouco maior (aproximadamente 30) e uma concentração de dados dentro dos quartis. Também há outliers, mas em menor número comparado à variável das meninas.
 <br>
 
-<b>female_children_out_of_school:</b> A distribuição de meninas fora da escola segue um padrão semelhante à variável geral, com uma mediana próxima de zero e uma quantidade expressiva de outliers. Isso pode refletir contextos em que a exclusão escolar feminina é mais acentuada em certas regiões ou grupos.
+<b>children_out_of_school (crianças fora da escola):</b> Esta variável, relacionada ao número de crianças fora da escola, tem uma mediana muito baixa (próxima de zero), indicando que, na maior parte das amostras, poucas crianças estão fora da escola. No entanto, há muitos outliers, o que pode indicar localidades ou situações excepcionais em que há um número significativamente maior de crianças fora da escola.
 <br>
 
-<b>male_children_out_of_school:</b> De forma semelhante às outras variáveis de exclusão escolar, a mediana está próxima de zero, com muitos outliers. A distribuição é comparável à das meninas, o que sugere que, em geral, há padrões semelhantes de exclusão escolar entre os gêneros, com exceções em alguns casos específicos.
+<b>female_children_out_of_school (meninas fora da escola):</b> A distribuição de meninas fora da escola segue um padrão semelhante à variável geral, com uma mediana próxima de zero e uma quantidade expressiva de outliers. Isso pode refletir contextos em que a exclusão escolar feminina é mais acentuada em certas regiões ou grupos.
 <br>
 
-
+<b>male_children_out_of_school (meninos fora da escola):</b> De forma semelhante às outras variáveis de exclusão escolar, a mediana está próxima de zero, com muitos outliers. A distribuição é comparável à das meninas, o que sugere que, em geral, há padrões semelhantes de exclusão escolar entre os gêneros, com exceções em alguns casos específicos.
+<br>
+<br>
+conclusão de Outliers:<br>
+Embora a maioria dos países tenha alcançado progressos consideráveis em áreas como proficiência de leitura e acesso escolar, as desigualdade ainda são evidentes e exigem atenção contínua. Em termos de proficiência de leitura, embora a maioria das crianças esteja dentro de um intervalo esperado, há variações regionais que podem refletir desigualdades no acesso à educação de qualidade. Além disso, as desigualdade de gênero são notáveis, com as meninas, em média, apresentando um desempenho inferior ao dos meninos em várias regiões, o que pode ser reflexo de fatores sociais e culturais que limitam as oportunidades de aprendizado para as meninas.
+<br>
+<br>
 Análise de Correlação:<br>
 Por fim, foi realizada uma análise de correlação entre as variáveis numéricas, resultando na construção de uma matriz de correlação. Essa análise é fundamental para entender as inter-relações entre as variáveis, fornecendo insights valiosos para investigações futuras. A matriz foi visualizada através de um heatmap, que evidenciou tanto correlações positivas quanto negativas.
 <br>
 
-![download (1)](https://github.com/user-attachments/assets/c3d2470d-e634-4403-8156-7b33613df3ee)
+Contextualização de Correlação:<br>
+Há uma correlação negativa entre a proficiência de leitura (tanto geral quanto por gênero) e a porcentagem de crianças fora da escola. Isso faz sentido, pois países com menores taxas de exclusão escolar tendem a ter melhores índices de proficiência em leitura, indicando que a escolarização é um fator importante para a melhoria das habilidades de leitura.<br>
+As correlações entre as variáveis de proficiência de leitura entre meninos e meninas também são visíveis, o que sugere que os padrões de aprendizado entre os gêneros estão relacionados, embora existam disparidades em alguns casos.
+
+![image](https://github.com/user-attachments/assets/ddeb4195-9641-44b6-9719-3118cc7dc427)
+
 
 <br>
 
