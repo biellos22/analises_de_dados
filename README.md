@@ -37,11 +37,13 @@ A exploração começou com o carregamento do arquivo CSV, seguido pela exibiç�
 <br>
 
 Verificação de Valores Ausentes:<br>
-Uma análise detalhada foi conduzida para identificar valores ausentes em cada coluna do DataFrame. Foi calculada a quantidade total e o percentual de valores ausentes, apresentados em um DataFrame específico. Esta análise revelou a extensão dos dados incompletos, evidenciando a necessidade de estratégias adequadas para tratamento, de forma a assegurar a robustez das análises futuras.
+Realizou-se uma análise detalhada para identificar valores ausentes em cada coluna do DataFrame. Foi calculada a quantidade total e o percentual de valores ausentes, organizados em um DataFrame específico. Esta análise revelou a extensão dos dados incompletos, destacando a importância de estratégias adequadas para tratar essas lacunas e garantir a confiabilidade das análises subsequentes.
 <br>
 
 Estatísticas Descritivas:<br>
-Foram calculadas as estatísticas descritivas para as variáveis numéricas. Este cálculo incluiu medidas como média, mediana, desvio padrão, valores mínimo e máximo, entre outros. As estatísticas descritivas proporcionaram uma compreensão aprofundada da distribuição e variabilidade dos dados, facilitando a identificação de padrões e anomalias.
+Calculou-se as estatísticas descritivas
+das variáveis numéricas, incluindo medidas como média, mediana, desvio padrão, valores mínimo e máximo, entre outras. 
+As estatísticas descritivas proporcionaram uma compreensão aprofundada da distribuição e variabilidade dos dados, facilitando a identificação de padrões e possíveis anomalias.
 <br>
 
 Tratamento de Valores Ausentes:<br>
