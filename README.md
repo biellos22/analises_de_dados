@@ -51,7 +51,7 @@ A análise inicial identificou que algumas colunas apresentavam uma quantidade s
 <br>
 
 Identificação de Outliers:<br>
-Para detectar possíveis outliers, foram gerados boxplots das variáveis numéricas. Essas visualizações permitiram uma análise gráfica da distribuição dos dados, facilitando a identificação de pontos que se afastam significativamente dos quartis. A identificação de outliers é uma etapa crítica para compreender a variação nos dados e seu potencial impacto nas análises subsequentes.
+Para detectar possíveis outliers, foram gerados boxplots das variáveis numéricas. Essas visualizações permitiram uma análise gráfica da distribuição dos dados, destacando pontos que se distanciam significativamente dos quartis. Identificar outliers é uma etapa crítica para compreender a variação nos dados e seu potencial impacto nas análises subsequentes.
 <br>
 
 ![image](https://github.com/user-attachments/assets/7e0d70b4-e985-42eb-b6f8-3078bb622fd2)
@@ -81,12 +81,13 @@ Embora a maioria dos países tenha alcançado progressos consideráveis em área
 <br>
 <br>
 Análise de Correlação:<br>
-Por fim, foi realizada uma análise de correlação entre as variáveis numéricas, resultando na construção de uma matriz de correlação. Essa análise é fundamental para entender as inter-relações entre as variáveis, fornecendo insights valiosos para investigações futuras. A matriz foi visualizada através de um heatmap, que evidenciou tanto correlações positivas quanto negativas.
+Foi realizada uma análise de correlação entre as variáveis numéricas, resultando na construção de uma matriz de correlação. Essa análise é essencial para entender as inter-relações entre as variáveis, fornecendo uma base sólida para investigações futuras. Para facilitar a visualização dessas relações, utilizamos um heatmap, que mostrou claramente as correlações positivas e negativas 
 <br>
 
 Contextualização de Correlação:<br>
-Há uma correlação negativa entre a proficiência de leitura (tanto geral quanto por gênero) e a porcentagem de crianças fora da escola. Isso faz sentido, pois países com menores taxas de exclusão escolar tendem a ter melhores índices de proficiência em leitura, indicando que a escolarização é um fator importante para a melhoria das habilidades de leitura.<br>
-As correlações entre as variáveis de proficiência de leitura entre meninos e meninas também são visíveis, o que sugere que os padrões de aprendizado entre os gêneros estão relacionados, embora existam disparidades em alguns casos.
+Observamos uma correlação negativa entre a proficiência de leitura (tanto geral quanto por gênero) e a porcentagem de crianças fora da escola. Isso faz sentido, pois países com menores taxas de exclusão escolar tendem a ter melhores índices de proficiência em leitura, indicando que a escolarização é um fator importante para a melhoria das habilidades de leitura.<br>
+
+Além disso, verificamos correlações entre as variáveis de proficiência de leitura entre meninos e meninas também são visíveis, o que sugere que os padrões de aprendizado entre os gêneros estão relacionados, embora existam disparidades em alguns casos.
 
 ![image](https://github.com/user-attachments/assets/ddeb4195-9641-44b6-9719-3118cc7dc427)
 
