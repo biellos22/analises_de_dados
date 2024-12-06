@@ -1,15 +1,32 @@
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 caminho_do_arquivo = 'mundo_bm_learning_poverty_pais.csv'
 dados = pd.read_csv(caminho_do_arquivo)
 
-print("Primeiras linhas do conjunto de dados:")
-print(dados.head())
+colunas_renomeadas = {
+    'children_reading_proficiency': 'proficiencia_leitura_criancas',
+    'female_children_reading_proficiency': 'proficiencia_leitura_criancas_feminino',
+    'male_children_reading_proficiency': 'proficiencia_leitura_criancas_masculino',
+    'children_out_of_school': 'criancas_fora_da_escola',
+    'female_children_out_of_school': 'criancas_fora_da_escola_feminino',
+    'male_children_out_of_school': 'criancas_fora_da_escola_masculino',
+    'female_pupil_reading_proficiency_gaml': 'proficiencia_leitura_criancas_feminino_gaml',
+    'male_pupil_reading_proficiency_gaml': 'proficiencia_leitura_criancas_masculino_gaml',
+    'year': 'ano',
+    'country_code': 'codigo_pais',
+    'region_name': 'nome_regiao',
+    'pupil_reading_proficiency_gaml': 'proficiencia_leitura_criancas_gaml'
+}
 
-valores_ausentes = dados.isnull().sum()
-percentual_valores_ausentes = (valores_ausentes / len(dados)) * 100
+dados_renomeados = dados.rename(columns=colunas_renomeadas)
+
+print("Primeiras linhas do conjunto de dados com as colunas renomeadas:")
+print(dados_renomeados.head())
+
+valores_ausentes = dados_renomeados.isnull().sum()
+percentual_valores_ausentes = (valores_ausentes / len(dados_renomeados)) * 100
 
 df_valores_ausentes = pd.DataFrame({
     'Valores Ausentes': valores_ausentes,
@@ -20,33 +37,30 @@ print("\nValores ausentes por coluna:")
 print(df_valores_ausentes.sort_values(by='Valores Ausentes', ascending=False))
 
 print("\nEstatísticas descritivas das variáveis numéricas:")
-print(dados.describe())
+print(dados_renomeados.describe())
 
-dados_numericos = dados.select_dtypes(include=['number'])
-
-dados_preenchidos = dados.copy()
+dados_numericos = dados_renomeados.select_dtypes(include=['number'])
+dados_preenchidos = dados_renomeados.copy()
 dados_preenchidos[dados_numericos.columns] = dados_numericos.fillna(dados_numericos.median())
 
 plt.figure(figsize=(15, 8))
 colunas_numericas = [
-    'children_reading_proficiency', # proficiencia_leitura_crianças
-    'female_children_reading_proficiency', # proficiencia_leitura_crianças_feminino
-    'male_children_reading_proficiency', # proficiencia_leitura_crianças_masculino
-    'children_out_of_school', # criancas_fora_da_escola
-    'female_children_out_of_school', # criancas_fora_da_escola_feminino
-    'male_children_out_of_school' # criancas_fora_da_escola_masculino
+    'proficiencia_leitura_criancas',
+    'proficiencia_leitura_criancas_feminino',
+    'proficiencia_leitura_criancas_masculino',
+    'criancas_fora_da_escola',
+    'criancas_fora_da_escola_feminino',
+    'criancas_fora_da_escola_masculino'
 ]
-
 sns.boxplot(data=dados_preenchidos[colunas_numericas])
 plt.xticks(rotation=90)
 plt.title("Boxplot das Variáveis Numéricas para Identificação de Outliers")
 plt.show()
 
 dados_numericos_preenchidos = dados_preenchidos.select_dtypes(include=['number'])
-
 matriz_correlacao = dados_numericos_preenchidos.corr()
 
 plt.figure(figsize=(12, 8))
 sns.heatmap(matriz_correlacao, annot=True, cmap='coolwarm')
-plt.title("Matriz de Correlação - heatmap")
+plt.title("Matriz de Correlação")
 plt.show()
