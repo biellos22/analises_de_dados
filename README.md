@@ -47,11 +47,11 @@ As estatísticas descritivas proporcionaram uma compreensão aprofundada da dist
 <br>
 
 Tratamento de Valores Ausentes:<br>
-Aos valores ausentes, a análise inicial revelou que algumas colunas apresentavam uma quantidade significativa de dados faltantes. Para tratar isso, foi adotada a estratégia de substituir os valores ausentes nas variáveis numéricas pela mediana de cada coluna. Isso foi feito para evitar que valores extremos ou outliers influenciassem negativamente o processo de imputação. A escolha da mediana, em vez da média, se deu por ser uma abordagem mais robusta frente à presença de valores atípicos. Ao preenchimento dos valores ausentes, a integridade dos dados foi restaurada, permitindo uma análise mais precisa e confiável nas etapas subsequentes.
+A análise inicial identificou que algumas colunas apresentavam uma quantidade significativa de dados faltantes. Para resolver esse problema, foi adotada a estratégia de substituir os valores ausentes nas variáveis numéricas pela mediana de cada coluna. Isso foi feito para evitar que valores extremos ou outliers influenciassem negativamente o processo de imputação. A escolha da mediana, em vez da média, se deu por ser uma abordagem mais robusta frente à presença de valores atípicos. Ao preenchimento dos valores ausentes, a integridade dos dados foi restaurada, permitindo uma análise mais precisa e confiável nas etapas subsequentes.
 <br>
 
 Identificação de Outliers:<br>
-Para a identificação de possíveis outliers, foram gerados boxplots das variáveis numéricas. Essas visualizações permitiram uma análise gráfica da distribuição dos dados, facilitando a identificação de pontos que se afastam significativamente dos quartis. A identificação de outliers é uma etapa crítica para compreender a variação nos dados e seu potencial impacto nas análises subsequentes.
+Para detectar possíveis outliers, foram gerados boxplots das variáveis numéricas. Essas visualizações permitiram uma análise gráfica da distribuição dos dados, facilitando a identificação de pontos que se afastam significativamente dos quartis. A identificação de outliers é uma etapa crítica para compreender a variação nos dados e seu potencial impacto nas análises subsequentes.
 <br>
 
 ![image](https://github.com/user-attachments/assets/7e0d70b4-e985-42eb-b6f8-3078bb622fd2)
